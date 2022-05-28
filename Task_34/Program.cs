@@ -11,12 +11,12 @@ int sum = 0;
 var newRnd = new Random();
 for (int i = 0; i < size; i++)
 {
-    nums[i] = newRnd.Next(0, 10);
-    Console.WriteLine(nums[i] + " ");
+    nums[i] = newRnd.Next(0, 100);
+    Console.Write(nums[i] + " ");
 }
 for (int i = 0; i < size; i++)
 {
-    
-    if(nums[i] %2 == 0) sum += i;
+
+    if(nums[i] %2 == 0) sum += 1;
 }
-Console.WriteLine($" Количество чётных чисел = {sum}");
+Console.WriteLine($" Количество чётных чисел в массиве = {sum}");
