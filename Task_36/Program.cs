@@ -7,18 +7,16 @@
 
 Console.Write("Введите размер массива -> ");
 int size = int.Parse(Console.ReadLine());
-int[] nums = new int[size];
+int[] array = new int[size];
 int sum = 0;
-
-var newRnd = new Random();
 for (int i = 0; i < size; i++)
 {
-    nums[i] = newRnd.Next(0, 100);
-    Console.Write(nums[i] + " ");
+    array[i] = new Random().Next(0, 100);
+    Console.Write(array[i] + " ");
 }
 for (int j = 0; j < size; j++)
 {
-
-    if( j %2 != 0) sum = sum + nums[j];
+    if (j % 2 != 0) sum = sum + array[j];
 }
+
 Console.WriteLine($" Сумма элементов стоящих на нечётных позициях = {sum}");
